@@ -108,7 +108,13 @@ img {
 }
 @media only screen and (max-width: 767px) {
   .mobile-menu-container {
-    padding: 72px 16px 40px 16px;
+    padding: 72px 0px 40px 0px;
+    margin: 0px 16px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   .mobile-menu {
     position: fixed;
@@ -141,6 +147,7 @@ img {
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
       border 250ms cubic-bezier(0.4, 0, 0.2, 1);
     padding: 0;
+    margin: 0;
     cursor: pointer;
   }
   .close-button-icon {
@@ -156,53 +163,54 @@ img {
   .modal-close-button:focus .close-button-icon {
     fill: #ffffff;
   }
-  .mobile-navigation {
-    width: 288px;
-    margin-bottom: 168px;
-  }
-  .mobile-nav-list {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 40px;
-  }
-  .mobile-nav-link {
-    color: #2e2f42;
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 1.11;
-    letter-spacing: 0.02em;
-    display: block;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .mobile-nav-link:hover,
-  .mobile-nav-link:focus {
-    color: #404bbf;
-  }
-  .mobile-address {
-    display: flex;
-    flex-direction: column;
-    font-style: normal;
-  }
-  .mobile-address-list {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    margin-bottom: 48px;
-  }
-  .mobile-address-link {
-    font-weight: 500px;
-    font-size: 20px;
-    line-height: 1.2;
-    letter-spacing: 0.02em;
-    color: #434455;
-    align-items: center;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .mobile-address-link:hover,
-  .mobile-address-link:focus {
-    color: #404bbf;
-  }
+}
+.mobile-nav-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+}
+.mobile-nav-link {
+  color: #2e2f42;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  display: block;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mobile-nav-link:hover,
+.mobile-nav-link:focus {
+  color: #404bbf;
+}
+.address-social-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 48px;
+}
+.mobile-address {
+  display: flex;
+  flex-direction: column;
+  font-style: normal;
+}
+.mobile-address-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.mobile-address-link {
+  font-weight: 500px;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #434455;
+  align-items: center;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mobile-address-link:hover,
+.mobile-address-link:focus {
+  color: #404bbf;
 }
 
 /* Backdrop start */
@@ -255,7 +263,6 @@ img {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  margin: 0 0 24px 0;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: #e7e9fc;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -470,9 +477,6 @@ img {
     fill: #111;
     line-height: 0;
   }
-  .menu-open-btn-icon {
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-  }
 }
 @media only screen and (min-width: 768px) {
   .mobile-menu {
@@ -526,6 +530,7 @@ img {
   }
   .address {
     display: block;
+    font-style: normal;
   }
   .address-list {
     display: flex;
@@ -537,8 +542,6 @@ img {
     line-height: 1.17;
     letter-spacing: 0.02em;
     color: #434455;
-    padding-top: 24px;
-    padding-bottom: 24px;
     align-items: center;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
@@ -660,7 +663,7 @@ img {
   line-height: 1.11;
   letter-spacing: 0.02em;
   color: #2e2f42;
-  padding-bottom: 8px;
+  margin-bottom: 8px;
 }
 .text-item {
   font-weight: 500;
@@ -768,7 +771,6 @@ img {
 .social-link {
   display: flex;
   justify-content: center;
-  align-items: center;
   gap: 24px;
 }
 @media only screen and (min-width: 768px) {
@@ -818,7 +820,7 @@ img {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-container {
-  padding: 32px 16px;
+  padding: 32px 32px;
   border: 1px solid #e7e9fc;
   border-top: none;
 }
@@ -828,7 +830,6 @@ img {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
-  padding-left: 16px;
   margin-bottom: 8px;
 }
 .service-item {
@@ -836,7 +837,6 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
-  padding-left: 16px;
 }
 @media only screen and (min-width: 768px) {
   .service-list {
